@@ -21,7 +21,7 @@ jobs:
       with:
         source_repo: "https://github.com/vspenubarthi/SyncTesting_1.git"
         source_branch: "master"
-        destination_repo: "https://vspenubarthi@github.com/vspenubarthi/SyncTesting_2.git"
+        destination_repo: "git@github.com:vspenubarthi/SyncTesting_2.git"
         destination_branch: "master"
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
   # This workflow contains a single job called "build"
