@@ -21,7 +21,7 @@ jobs:
       uses: wei/git-sync@v2
       with:
         source_repo: "https://github.com/vspenubarthi/SyncTesting_1.git"
-        source_branch: "master"
+        source_branch: "student-release"
         destination_repo: "git@github.com:vspenubarthi/SyncTesting_2.git"
         destination_branch: "master"
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
