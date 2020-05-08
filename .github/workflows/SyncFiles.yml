@@ -22,7 +22,7 @@ jobs:
         with:
           # The arguments for the `git add` command (see the paragraph below for more info)
           # Default: '.'
-          add: 'src'
+          add: 'converted-exercises'
 
           # The name of the user that will be displayed as the author of the commit
           # Default: author of the commit that triggered the run
@@ -32,9 +32,9 @@ jobs:
           # Default: author of the commit that triggered the run
           author_email: mail@example.com
 
-          # The local path to the directory where your repository is located. You should use actions/checkout first to set it up
-          # Default: '.'
-          cwd: './path/to/the/repo'
+#           # The local path to the directory where your repository is located. You should use actions/checkout first to set it up
+#           # Default: '.'
+#           cwd: './path/to/the/repo'
 
           # Whether to use the --force option on `git add`, in order to bypass eventual gitignores
           # Default: false
