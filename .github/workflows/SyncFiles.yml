@@ -18,9 +18,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Create local changes
-      run: |
-        ...
+#     - name: Create local changes
+#       run: |
+#         ...
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
