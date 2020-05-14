@@ -28,7 +28,7 @@ jobs:
         git add anotherFile.txt
     - name: Commit files
       run: |
-        git pull
+        git pull origin master
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "Add changes" -a
