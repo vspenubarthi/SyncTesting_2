@@ -27,7 +27,7 @@ jobs:
           ref: 'student-release'
           force: true
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN_VAL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   repo-sync:
     runs-on: ubuntu-latest
     needs: [convert-and-commit]
