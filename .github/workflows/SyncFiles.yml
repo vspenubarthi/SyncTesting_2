@@ -24,8 +24,8 @@ jobs:
         git reset --hard origin/student-release
     - name: Create local changes
       run: |
-        echo "some more text" > AA.txt
-        git add AA.txt
+        echo "some more text" > AAA.txt
+        git add AAA.txt
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
