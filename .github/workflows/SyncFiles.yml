@@ -24,6 +24,7 @@ jobs:
         git reset --hard origin/student-release
     - name: Create local changes
       run: |
+        git pull
         echo "some text" > anotherFile.txt
         git add anotherFile.txt
     - name: Commit files
