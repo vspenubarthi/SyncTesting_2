@@ -20,12 +20,12 @@ jobs:
     - uses: actions/checkout@master
     - name: Pull from stu-release
       run: |
-        git reset --hard origin/student-release
         git pull
+        git reset --hard origin/student-release
     - name: Create local changes
       run: |
         echo "some text" > anotherFile.txt
-        git add aNewFile.txt
+        git add anotherFile.txt
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
@@ -36,13 +36,13 @@ jobs:
       with:
         branch: 'student-release'
         github_token: ${{ secrets.GITHUB_TOKEN }}
-#     - name: Checkout student release
-#       uses: actions/checkout@v2
-#       with:
-#         ref: student-release
-#     - name: Pull changes
-#       run: |
-#         git push origin student-release --force
+    - name: Checkout student release
+      uses: actions/checkout@v2
+      with:
+        ref: student-release
+    - name: Pull changes
+      run: |
+        git push origin student-release --force
 #   convert-and-commit:
 #     runs-on: ubuntu-latest
 #     needs: [build]
