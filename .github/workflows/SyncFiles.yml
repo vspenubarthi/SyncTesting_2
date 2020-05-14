@@ -29,7 +29,9 @@ jobs:
         git commit -m "Add changes" -a
     - name: Pull from stu-release
       run: |
+        git checkout student-release
         git pull --rebase
+        git checkout master
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
