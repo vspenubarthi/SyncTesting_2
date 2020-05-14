@@ -22,6 +22,7 @@ jobs:
       run: |
         git pull
         git reset --hard origin/student-release
+        git pull
     - name: Create local changes
       run: |
         echo "some text" > anotherFile.txt
