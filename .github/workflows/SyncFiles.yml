@@ -25,7 +25,7 @@ jobs:
       run: |
         git reset --hard HEAD
         git pull
-        git reset --hard origin/student-release
+        #git reset --hard origin/student-release
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
@@ -45,6 +45,7 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         branch: 'student-release'
+        force: true
         github_token: ${{ secrets.GITHUB_TOKEN }}
 #     - name: Checkout student-release
 #       uses: actions/checkout@v2
