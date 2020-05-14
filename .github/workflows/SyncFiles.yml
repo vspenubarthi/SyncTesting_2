@@ -30,7 +30,7 @@ jobs:
     - name: Pull from stu-release
       run: |
         git pull
-        git reset --hard origin/master
+        git reset --hard origin/student-release
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
