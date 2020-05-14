@@ -14,13 +14,8 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 #Test Add
 jobs:
-  testy:
-    runs-on: ubuntu_latest
-    steps:
-      - run: unset $(git rev-parse --local-env-vars)
   convert-and-commit:
     runs-on: ubuntu-latest
-    needs: [testy]
     steps:
       - name: Commit changes
         uses: EndBug/add-and-commit@v4
@@ -29,6 +24,7 @@ jobs:
           author_email: mail@example.com
           message: "Your commit message"
           add: "*.js"
+          ref: 'master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   repo-sync:
