@@ -37,7 +37,7 @@ jobs:
         cogbooks original-notebooks/ --dir converted-exercises/
         git status
         git add converted-exercises/
-    - name: Commit files
+    - name: Commit Files
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
