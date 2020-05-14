@@ -20,7 +20,8 @@ jobs:
     - uses: actions/checkout@master
     - name: Create local changes
       run: |
-        echo "some text" > aNewFile
+        echo "some text" > aNewFile.txt
+        git add aNewFile.txt
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
