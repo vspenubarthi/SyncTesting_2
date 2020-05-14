@@ -20,7 +20,6 @@ jobs:
     - uses: actions/checkout@master
     - name: Pull from stu-release
       run: |
-        git pull
         git reset --hard origin/student-release
         git pull
     - name: Create local changes
