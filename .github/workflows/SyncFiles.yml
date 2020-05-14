@@ -41,7 +41,7 @@ jobs:
     needs: [build]
     steps:
       - name: Commit changes
-        uses: EndBug/add-and-commit@v4
+        uses: EndBug/add-and-commit@v3
         with:
           author_name: Your Name
           author_email: mail@example.com
