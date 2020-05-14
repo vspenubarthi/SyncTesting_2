@@ -18,6 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - name: Pull from stu-release
+      run: |
+        git pull
+        git reset --hard origin/student-release
     - name: Create local changes
       run: |
         echo "some text" > aNewFile.txt
@@ -27,10 +31,6 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "Add changes" -a
-    - name: Pull from stu-release
-      run: |
-        git pull
-        git reset --hard origin/student-release
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
