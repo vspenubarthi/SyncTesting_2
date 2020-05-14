@@ -36,7 +36,7 @@ jobs:
       with:
         branch: 'student-release'
         github_token: ${{ secrets.GITHUB_TOKEN }}
-    - name: Checkout student release
+    - name: Checkout student-release
       uses: actions/checkout@v2
       with:
         ref: student-release
